@@ -11,12 +11,12 @@ class TestHello(unittest.TestCase):
     def test_hello(self):
         rv = self.app.get('/')
         self.assertEqual(rv.status, '200 OK')
-        self.assertEqual(rv.data, b'Hello World 1!\n')
+        self.assertEqual(rv.data, b'Hello World 2!\n')
 
     def test_hello_hello(self):
         rv = self.app.get('/hello/')
         self.assertEqual(rv.status, '200 OK')
-        self.assertEqual(rv.data, b'Hello World 1!\n')
+        self.assertEqual(rv.data, b'Hello World 2!\n')
 
 if __name__ == '__main__':
     ############# Add these lines #############
